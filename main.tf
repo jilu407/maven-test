@@ -12,9 +12,9 @@ resource "heroku_build" "example" {
   app = "my-name"
     
   source = {
-    path = "target/hello.jar"
+    path = "./src"
   }
     provisioner "local-exec" {
-       command= "heroku deploy:jar target/hello.jar --app sushi"     
+       command= "heroku deploy:jar target/hello.jar --app java-app"     
 }
 }
